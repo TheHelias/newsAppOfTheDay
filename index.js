@@ -14,8 +14,9 @@ $(document).ready(function(){
             $('.tweetQuote')
             .attr(
                 'href', 
-                'https://twitter.com/intent/tweet?text= ' + currentQuote.title + ' - ' + currentQuote.author  + ' (' + currentQuote.url + ')'
-                )//I included tweeting the url myself
+                'https://twitter.com/intent/tweet?text= ' + currentQuote.title + ' - ' + currentQuote.author  + `
+                ${currentQuote.url} `
+                )
                 .attr('target', '_blank')//this is to ensure it opens in a new window
                 .attr('disabled', false);
                 $('.read').html('Show me one more');
